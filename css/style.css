@@ -1,0 +1,176 @@
+/* Styles for header */
+html {
+    height: 100%;
+}
+
+body {
+    background-color: darkblue !important;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: gold;
+    color: darkblue;
+    z-index: 1000; /* Ensure header is above other content */
+}
+
+.sticky {
+    top: -60px; /* Height of collapsed navbar */
+    transition: top 0.3s; /* Smooth transition effect */
+}
+
+header .navbar {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar a {
+    color: darkblue;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* Styles for town map */
+.town-map {
+    position: relative;
+    width: 80%;
+    max-width: 100vw;
+    height: calc(100vh - 160px); /* Adjusted to account for header and footer height */
+    margin: auto;
+    margin-top: 60px; /* Adjust as needed to create space */
+    margin-bottom: 100px;
+    border: blue;
+    box-shadow: inset 0 0 0 1000px rgba(4, 59, 92, .6);
+    background-image: url('../img/town2.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+
+.icon {
+    position: absolute;
+}
+
+.icon img {
+    width: 20%; /* Set the width of the icons relative to the width of the town map container */
+    height: auto; /* Let the height adjust proportionally based on the width */
+    z-index: 2; /* Ensure the icons appear above other elements */
+}
+
+.welcome {
+    position: relative;
+    margin-top: 60px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto; /* Center the div horizontally */
+    text-align: center; /* Center the content inside the div */
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    margin: 0 10px; /* Adjust margin between items */
+}
+
+.carousel-item img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for footer */
+footer {
+    background-color: RGB(255, 215, 0, 0.5);
+    color: darkblue;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    header .navbar {
+        width: 100%;
+    }
+
+    .welcome {
+        margin-top: 5vh; /* Adjusted margin for smaller screens using vh */
+    }
+
+    .town-map {
+        margin-top: 20vh; /* Adjusted margin for smaller screens using vh */
+        margin-bottom: 20vh;
+    }
+
+    /* Styles for collapsed navbar */
+    .navbar-toggle .navbar-links {
+        display: none; /* Hide links when collapsed */
+    }
+
+    /* Show toggle button when collapsed */
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+#gallery-modal {
+    display: none;
+    position: absolute; /* Set position to absolute */
+    top: 0; /* Position at the top of the town map div */
+    left: 0; /* Position at the left of the town map div */
+    width: 100%; /* Occupy full width of the town map div */
+    height: 100%; /* Occupy full height of the town map div */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure modal appears above other content */
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%; /* Center the modal vertically */
+    left: 50%; /* Center the modal horizontally */
+    transform: translate(-50%, -50%); /* Center the modal both horizontally and vertically */
+    background-color: #fff; /* White background for the modal content */
+    padding: 20px; /* Add padding for content */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+    header .navbar a {
+        padding: 5px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .welcome {
+        margin-top: 4vh; /* Further adjusted margin for even smaller screens using vh */
+    }
+
+    .town-map {
+        margin-top: 15vh; /* Further adjusted margin for even smaller screens using vh */
+        margin-bottom: 15vh;
+    }
+}

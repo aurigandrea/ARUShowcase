@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARU HiPPS Town</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  <link rel="stylesheet" href="css/style.css">
+
+  <meta name="description" content="">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.png">
+
+  <!--link rel="manifest" href="site.webmanifest"> -->
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+   <header id="header">
+    <div class="navbar">
+        <img src="../img/heron.png" alt="ARULOGO" width="5%">
+        <h1>ARU HiPPS Town</h1>
+        <div class="navbar-links">
+            <!-- Your navigation links go here -->
+            <a href="#">Home</a>
+            <a href="#">About us</a>
+            <a href="#">The Projects</a>
+            <!-- Add more links as needed -->
+        </div>
+    </div>
+</header>
+
+    <div class="welcome"><h2> Welcome to ARU HiPPS Town! Scroll down the map and click on the buildings to discover what we have.</h2></div>
+    <div  class="town-map">
+    <!-- Building icons as clickable links -->
+    <a href="#" class="icon" onclick="showGallery('hospital')">
+        <img src="img/hospital.png" alt="Hospital">
+    </a>
+
+    <a href="#" class="icon" onclick="showGallery('school')">
+        <img src="img/school.png" alt="School">
+    </a>
+     <a href="#" class="icon" onclick="showGallery('church')">
+        <img src="img/church.png" alt="church">
+    </a>
+      <a href="#" class="icon" onclick="showGallery('government')">
+        <img src="img/government.png" alt="government">
+    </a>
+       <a href="#" class="icon" onclick="showGallery('library')">
+        <img src="img/library.png" alt="Library">
+          <a href="#" class="icon" onclick="showGallery('museum')">
+        <img src="img/museum.png" alt="museum">
+             <a href="#" class="icon" onclick="showGallery('fun')">
+        <img src="img/fun.png" alt="fun">
+    </a>
+    </a>
+    </a>
+</div>
+    <!-- Modal for image gallery -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGallery()">&times;</span>
+                            <div id="carousel" class="carousel">
+            <div id="image-gallery" class="image-gallery-container">
+                <!-- Images will be loaded dynamically here -->
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Footer content goes here -->
+        <p>&copy; 2024 Town Website. All rights reserved.</p>
+    </footer>
+
+ <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
+
+</body>
+
+</html>
