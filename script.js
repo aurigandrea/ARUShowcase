@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (icon === "hospital") {
             // Load hospital images into the carousel
             gallery.innerHTML += `
-                <div id="carouselHospital" class="carousel slide" data-ride="carousel">
+                <div id="carouselHospital" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="img/hospital-image1.jpg" class="d-block w-100" alt="Hospital Image 1">
@@ -79,19 +79,19 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (icon === "school") {
             // Load school images into the carousel
             gallery.innerHTML += `
-                <div id="carouselSchool" class="carousel slide" data-ride="carousel">
+                <div id="carouselSchool" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/redlining.png" class="d-block w-100" alt="Redlining">
+        <a href="https://storymaps.arcgis.com/stories/03390c459fbc42afa211c2d3aba38709"><img src="../img/redlining.png" alt="redlining"></a>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/spectacle.png" class="d-block w-100" alt="Spectacle">
+        <a href="https://storymaps.arcgis.com/stories/625750a424bd4ce8b794024fcb2429d7"><img src="../img/spectacle.png" alt="spectacle"></a>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/microagression.png" class="d-block w-100" alt="Microagression">
+        <a href="https://storymaps.arcgis.com/stories/b89214ce881747869b6b11afdcc5710c"><img src="../img/microagression.png" alt="microagression"></a>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/bobby.png" class="d-block w-100" alt="Fakenews">
+        <a href="https://aurigandrea.itch.io/national-curriculum-and-social-challenges"><img src="../img/bobby.png" alt="bobby"></a>
                         </div>
                         <!-- Add more school images here -->
                     </div>
@@ -108,10 +108,10 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if (icon === "church") {
             // Load church images into the carousel
             gallery.innerHTML += `
-                <div id="carouselChurch" class="carousel slide" data-ride="carousel">
+                <div id="carouselChurch" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/irish.png" class="d-block w-100" alt="Irish">
+        <a href="https://storymaps.arcgis.com/stories/f0ed540b49544d79a493fd46a8697fc7"><img src="../img/irish.png" alt="irish"></a>
                         </div>
 
                         <!-- Add more church images here -->
@@ -130,11 +130,15 @@ document.addEventListener("DOMContentLoaded", function() {
         else if (icon === "museum") {
             // Load museum images into the carousel
             gallery.innerHTML += `
-                <div id="carouselMuseum" class="carousel slide" data-ride="museum">
+                <div id="carouselMuseum" class="carousel slide carousel-fade" data-ride="museum">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/cortes.png" class="d-block w-100" alt="cortes">
+                                 <a href="https://storymaps.arcgis.com/stories/d809c80c7b7745ff83ee59f815d4be13"><img src="../img/cortes.png" alt="cortes"></a>
                         </div>
+                         <div class="carousel-item">
+                           <a href="https://storymaps.arcgis.com/stories/db71842087234725952aa42bdd762dfb"><img src="../img/sex.png" alt="sex"></a>
+                        </div>
+
 
                         <!-- Add more museum images here -->
                     </div>
@@ -152,10 +156,13 @@ document.addEventListener("DOMContentLoaded", function() {
         else if (icon === "library") {
             // Load Library images into the carousel
             gallery.innerHTML += `
-                <div id="carouselLibrary" class="carousel slide" data-ride="carousel">
+                <div id="carouselLibrary" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/ria.png" class="d-block w-100" alt="Kipling">
+        <a href="https://storymaps.arcgis.com/stories/df4d81b60d704440bc01945244cd3379"><img src="../img/ria.png" alt="ria"></a>
+                        </div>
+                         <div class="carousel-item">
+        <a href="https://storymaps.arcgis.com/stories/cd6d5d86122e47af8d12e24a808f29a5"><img src="../img/911.png" alt="911"></a>
                         </div>
 
                         <!-- Add more library images here -->
@@ -174,10 +181,10 @@ document.addEventListener("DOMContentLoaded", function() {
         else if (icon === "government") {
             // Load government images into the carousel
             gallery.innerHTML += `
-                <div id="carouselGovernment" class="carousel slide" data-ride="carousel">
+                <div id="carouselGovernment" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/metropoli.png" class="d-block w-100" alt="metropoli">
+        <a href="https://aurigandrea.itch.io/metropoli-habitus"><img src="../img/metropoli.png" alt="metropoli"></a>
                         </div>
 
                         <!-- Add more government images here -->
@@ -196,13 +203,13 @@ document.addEventListener("DOMContentLoaded", function() {
         else if (icon === "fun") {
             // Load fun images into the carousel
             gallery.innerHTML += `
-                <div id="carouselFun" class="carousel slide" data-ride="carousel">
+                <div id="carouselFun" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/madchester.png" class="d-block w-100" alt="madchester">
+        <a href="https://storymaps.arcgis.com/stories/ca2d1ceb68b944e6adb7c5270f6f8573"><img src="../img/madchester.png" alt="madchester"></a>
                         </div>
                          <div class="carousel-item">
-                            <img src="img/football.png" class="d-block w-100" alt="football">
+        <a href="https://storymaps.arcgis.com/stories/f0ed540b49544d79a493fd46a8697fc7"><img src="../img/football.png" alt="football"></a>
                         </div>
 
                         <!-- Add more fun images here -->
