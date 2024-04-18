@@ -291,6 +291,14 @@ p {
     align-items: center;
 }
 
+.ethics img{
+   display: flex;
+    justify-content: center;
+    align-items: center;
+      padding: 10px;
+  margin: auto;
+
+}
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
     header .navbar {

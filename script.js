@@ -255,6 +255,9 @@ window.addEventListener('load', positionIcons);
                         <div class="carousel-item active">
         <a href="https://aurigandrea.itch.io/metropoli-habitus"><img src="../img/metropoli.png" alt="metropoli"></a>
                         </div>
+                         <div class="carousel-item">
+        <a href="ethics.html"><img src="../img/ethics.png" alt="ethics"></a>
+                        </div>
 
                         <!-- Add more government images here -->
                     </div>
