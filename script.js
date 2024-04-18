@@ -99,6 +99,9 @@ window.addEventListener('load', positionIcons);
             // Load hospital images into the carousel
             gallery.innerHTML += `
                 <div id="carouselHospital" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+    <li data-target="#carouselHospital" data-slide-to="0" class="active"></li>
+</ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <a href="https://aurigandrea.itch.io/anxiety-twine-game"><img src="img/anxiety.png" class="d-block w-100" alt="Hospital Image 1"></a>
@@ -119,6 +122,12 @@ window.addEventListener('load', positionIcons);
             // Load school images into the carousel
             gallery.innerHTML += `
                 <div id="carouselSchool" class="carousel slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators">
+    <li data-target="carouselSchool" data-slide-to="0" class="active"></li>
+    <li data-target="carouselSchool" data-slide-to="1"></li>
+    <li data-target="carouselSchool" data-slide-to="2"></li>
+    <li data-target="carouselSchool" data-slide-to="3"></li>
+</ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
         <a href="https://storymaps.arcgis.com/stories/03390c459fbc42afa211c2d3aba38709"><img src="../img/redlining.png" alt="redlining"></a>
@@ -148,6 +157,9 @@ window.addEventListener('load', positionIcons);
             // Load church images into the carousel
             gallery.innerHTML += `
                 <div id="carouselChurch" class="carousel slide carousel-fade" data-ride="carousel">
+                    <ol class="carousel-indicators">
+    <li data-target="carouselChurch" data-slide-to="0" class="active"></li>
+</ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
         <a href="https://storymaps.arcgis.com/stories/f0ed540b49544d79a493fd46a8697fc7"><img src="../img/irish.png" alt="irish"></a>
@@ -170,6 +182,11 @@ window.addEventListener('load', positionIcons);
             // Load museum images into the carousel
             gallery.innerHTML += `
                 <div id="carouselMuseum" class="carousel slide carousel-fade" data-ride="museum">
+                   <ol class="carousel-indicators">
+    <li data-target="carouselMuseum" data-slide-to="0" class="active"></li>
+    <li data-target="carouselMuseum" data-slide-to="1"></li>
+    <li data-target="carouselMuseum" data-slide-to="2"></li>
+</ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                                  <a href="https://storymaps.arcgis.com/stories/d809c80c7b7745ff83ee59f815d4be13"><img src="../img/cortes.png" alt="cortes"></a>
@@ -198,6 +215,11 @@ window.addEventListener('load', positionIcons);
             // Load Library images into the carousel
             gallery.innerHTML += `
                 <div id="carouselLibrary" class="carousel slide carousel-fade" data-ride="carousel">
+                   <ol class="carousel-indicators">
+    <li data-target="carouselLibrary" data-slide-to="0" class="active"></li>
+    <li data-target="carouselLibrary" data-slide-to="1"></li>
+    <li data-target="carouselLibrary" data-slide-to="2"></li>
+</ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
         <a href="https://storymaps.arcgis.com/stories/df4d81b60d704440bc01945244cd3379"><img src="../img/ria.png" alt="ria"></a>
@@ -226,6 +248,9 @@ window.addEventListener('load', positionIcons);
             // Load government images into the carousel
             gallery.innerHTML += `
                 <div id="carouselGovernment" class="carousel slide carousel-fade" data-ride="carousel">
+<ol class="carousel-indicators">
+    <li data-target="carouselGovernment" data-slide-to="0" class="active"></li>
+</ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
         <a href="https://aurigandrea.itch.io/metropoli-habitus"><img src="../img/metropoli.png" alt="metropoli"></a>
@@ -248,6 +273,10 @@ window.addEventListener('load', positionIcons);
             // Load fun images into the carousel
             gallery.innerHTML += `
                 <div id="carouselFun" class="carousel slide carousel-fade" data-ride="carousel">
+                   <ol class="carousel-indicators">
+    <li data-target="carouselFun" data-slide-to="0" class="active"></li>
+    <li data-target="carouselFun" data-slide-to="1"></li>
+</ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
         <a href="https://storymaps.arcgis.com/stories/ca2d1ceb68b944e6adb7c5270f6f8573"><img src="../img/madchester.png" alt="madchester"></a>
