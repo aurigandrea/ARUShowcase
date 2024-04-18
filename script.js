@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <div id="carouselHospital" class="carousel slide carousel-fade" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="img/hospital-image1.jpg" class="d-block w-100" alt="Hospital Image 1">
+                            <a href="https://aurigandrea.itch.io/anxiety-twine-game"><img src="img/anxiety.png" class="d-block w-100" alt="Hospital Image 1"></a>
                         </div>
                         <!-- Add more hospital images here -->
                     </div>
