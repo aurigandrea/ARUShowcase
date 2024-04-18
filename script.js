@@ -299,16 +299,22 @@ icons.forEach(function(icon) {
 
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-let prevScrollpos = window.scrollY > 1;
-window.onscroll = function() {
-  let currentScrollPos = window.scrollY > 1;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("header").style.top = "0";
-  } else {
-    document.getElementById("header").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+    let prevScrollPos = window.pageYOffset;
+    let header = document.getElementById("header");
+
+    window.addEventListener('scroll', function() {
+        let currentScrollPos = window.pageYOffset;
+
+        if (prevScrollPos > currentScrollPos) {
+            // Show navbar on scroll up
+            header.style.top = "0";
+        } else {
+            // Hide navbar on scroll down
+            header.style.top = "-50px";
+        }
+
+        prevScrollPos = currentScrollPos;
+    });
 });function toggleMenu() {
     const navbarLinks = document.querySelector('.navbar-links');
     navbarLinks.style.display = navbarLinks.style.display === 'block' ? 'none' : 'block';
