@@ -89,7 +89,7 @@ header .navbar a:hover ~ a {
 .welcome {
     position: relative;
     color: lightgray;
-    margin-top: 80px;
+    margin-top: 100px;
     padding: 10px;
     margin-left: auto;
     margin-right: auto; /* Center the div horizontally */
@@ -316,12 +316,12 @@ p {
     }
 
     .welcome {
-        margin-top: 10vh; /* Adjusted margin for smaller screens using vh */
+        margin-top: 20vh !important; /* Adjusted margin for smaller screens using vh */
     }
 
     .town-map {
-        margin-top: 20vh; /* Adjusted margin for smaller screens using vh */
-        margin-bottom: 10vh;
+        margin-top: 15vh; /* Adjusted margin for smaller screens using vh */
+        margin-bottom: 8vh;
     }
 
     /* Styles for collapsed navbar */
