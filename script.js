@@ -286,17 +286,16 @@ window.addEventListener('load', positionIcons);
     });
 
 
-   // Attach click event listeners to each icon
-icons.forEach(function(icon) {
-    icon.addEventListener('click', function() {
-        // Get the icon type
-        let iconType = icon.querySelector('img').alt.toLowerCase();
-        // Show gallery for the clicked icon type
-        showGallery(iconType);
+    // Attach click event listeners to each icon
+    icons.forEach(function(icon) {
+        // Modify the event listener to target the icon image and handle the click event
+        let iconImg = icon.querySelector('img');
+        iconImg.addEventListener('click', function(event) {
+            event.stopPropagation(); // Stop event propagation to prevent clicks on parent container
+            let iconType = iconImg.alt.toLowerCase();
+            showGallery(iconType); // Show gallery for the clicked icon type
+        });
     });
-});
-
-
 
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
     let prevScrollPos = window.pageYOffset;
