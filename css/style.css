@@ -320,8 +320,12 @@ p {
     }
 
     .town-map {
-        margin-top: 15vh; /* Adjusted margin for smaller screens using vh */
-        margin-bottom: 8vh;
+        margin-top: 10vh !important; /* Adjusted margin for smaller screens using vh */
+        margin-bottom: 8vh !important;
+    }
+
+    .container {
+        margin-top: 20vh !important; /* Adjusted margin for smaller screens using vh */
     }
 
     /* Styles for collapsed navbar */
