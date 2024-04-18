@@ -269,13 +269,4 @@ footer {
         margin-top: 15vh; /* Further adjusted margin for even smaller screens using vh */
         margin-bottom: 15vh;
     }
-     .icon img {
-        width: 10%; /* Further adjust for smaller screens */
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .icon img {
-        width: 12%; /* Adjust based on screen size */
-    }
 }

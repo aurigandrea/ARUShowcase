@@ -27,52 +27,20 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Function to randomly position icons without overlapping
-
-function positionIcons() {
-    let townMapRect = townMap.getBoundingClientRect();
-    let townMapWidth = townMapRect.width;
-    let townMapHeight = townMapRect.height;
-    let iconWidth, iconHeight;
-    let iconCount = icons.length;
-
-    // Calculate a reasonable icon size based on the available map area
-    if (iconCount > 0) {
-        iconWidth = Math.floor(townMapWidth / Math.ceil(Math.sqrt(iconCount)));
-        iconHeight = iconWidth; // Assuming square icons for simplicity
+    function positionIcons() {
+        icons.forEach(function(icon) {
+            let iconRect = icon.getBoundingClientRect();
+            let maxX = townMap.offsetWidth - iconRect.width;
+            let maxY = townMap.offsetHeight - iconRect.height;
+            let randomX, randomY;
+            do {
+                randomX = Math.floor(Math.random() * maxX);
+                randomY = Math.floor(Math.random() * maxY);
+                icon.style.left = randomX + "px";
+                icon.style.top = randomY + "px";
+            } while (iconOverlapsOtherIcons(icon, icons));
+        });
     }
-
-    // Array to keep track of occupied positions
-    let occupiedPositions = [];
-
-    icons.forEach(function(icon) {
-        let randomX, randomY;
-        let overlaps;
-
-        // Try to find a valid position that doesn't overlap with other icons
-        do {
-            randomX = Math.random() * (townMapWidth - iconWidth);
-            randomY = Math.random() * (townMapHeight - iconHeight);
-
-            // Check if the randomly generated position overlaps with any existing icon
-            overlaps = occupiedPositions.some(pos => {
-                return (
-                    randomX < pos.x + iconWidth &&
-                    randomX + iconWidth > pos.x &&
-                    randomY < pos.y + iconHeight &&
-                    randomY + iconHeight > pos.y
-                );
-            });
-        } while (overlaps);
-
-        // Update the icon's position
-        icon.style.left = randomX + "px";
-        icon.style.top = randomY + "px";
-
-        // Record the occupied position for this icon
-        occupiedPositions.push({ x: randomX, y: randomY });
-    });
-}
-
 
     // Call positionIcons function initially and on window resize
     positionIcons();
