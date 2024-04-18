@@ -108,14 +108,14 @@ window.addEventListener('load', positionIcons);
                         </div>
                         <!-- Add more hospital images here -->
                     </div>
-                    <a class="carousel-control-prev" href="#carouselHospital" role="button" data-slide="prev">
+             <!--       <a class="carousel-control-prev" href="#carouselHospital" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselHospital" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
-                    </a>
+                    </a> -->
                 </div>
             `;
         } else if (icon === "school") {
@@ -167,14 +167,14 @@ window.addEventListener('load', positionIcons);
 
                         <!-- Add more church images here -->
                     </div>
-                    <a class="carousel-control-prev" href="#carouselChurch" role="button" data-slide="prev">
+                  <!--  <a class="carousel-control-prev" href="#carouselChurch" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="sr-only">Previous</span>
                     </a>
                     <a class="carousel-control-next" href="#carouselChurch" role="button" data-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
-                    </a>
+                    </a> -->
                 </div>
             `;
         }
