@@ -60,7 +60,6 @@ header .navbar a {
 
 .icon img {
     width: 20%; /* Set the width of the icons relative to the width of the town map container */
-    height: auto; /* Let the height adjust proportionally based on the width */
     z-index: 2; /* Ensure the icons appear above other elements */
 }
 

@@ -27,24 +27,63 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Function to randomly position icons without overlapping
-    function positionIcons() {
-        icons.forEach(function(icon) {
-            let iconRect = icon.getBoundingClientRect();
-            let maxX = townMap.offsetWidth - iconRect.width;
-            let maxY = townMap.offsetHeight - iconRect.height;
-            let randomX, randomY;
-            do {
-                randomX = Math.floor(Math.random() * maxX);
-                randomY = Math.floor(Math.random() * maxY);
-                icon.style.left = randomX + "px";
-                icon.style.top = randomY + "px";
-            } while (iconOverlapsOtherIcons(icon, icons));
-        });
-    }
+function positionIcons() {
+    let townMap = document.querySelector('.town-map');
+    let townMapRect = townMap.getBoundingClientRect();
+    let townMapWidth = townMapRect.width;
+    let townMapHeight = townMapRect.height;
+    let icons = document.querySelectorAll('.icon');
+    let iconCount = icons.length;
 
-    // Call positionIcons function initially and on window resize
-    positionIcons();
-    window.addEventListener('resize', positionIcons);
+    // Calculate a reasonable icon size based on the available map area
+    let iconSize = Math.min(townMapWidth, townMapHeight) / Math.ceil(Math.sqrt(iconCount));
+    let iconWidth = iconSize;
+    let iconHeight = iconSize;
+
+    // Array to keep track of occupied positions
+    let occupiedPositions = [];
+    let maxAttempts = 100; // Maximum attempts to position an icon
+
+    icons.forEach(function(icon) {
+        let randomX, randomY;
+        let overlaps;
+        let attempts = 0;
+
+        do {
+            // Generate random coordinates within the town map area
+            randomX = Math.floor(Math.random() * (townMapWidth - iconWidth));
+            randomY = Math.floor(Math.random() * (townMapHeight - iconHeight));
+
+            // Check if the randomly generated position overlaps with any existing icon
+            overlaps = occupiedPositions.some(pos => {
+                return (
+                    randomX < pos.x + iconWidth &&
+                    randomX + iconWidth > pos.x &&
+                    randomY < pos.y + iconHeight &&
+                    randomY + iconHeight > pos.y
+                );
+            });
+
+            attempts++;
+            // Break the loop if maximum attempts reached
+            if (attempts >= maxAttempts) {
+                console.warn("Exceeded maximum attempts to position icon:", icon);
+                break;
+            }
+        } while (overlaps);
+
+        // Update the icon's position if a valid position was found
+        if (!overlaps) {
+            icon.style.left = randomX + "px";
+            icon.style.top = randomY + "px";
+            occupiedPositions.push({ x: randomX, y: randomY });
+        }
+    });
+}
+
+// Call the positionIcons function when the page loads
+window.addEventListener('load', positionIcons);
+
 
     // Function to show image gallery for specific icon
     function showGallery(icon) {
