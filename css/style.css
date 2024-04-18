@@ -96,15 +96,27 @@ header .navbar a:hover ~ a {
     text-align: center; /* Center the content inside the div */
 }
 
-.modal-content {
-    text-align: center;
+.modal{
+  margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto; /* Center the div horizontally */
+      text-align: center; /* Center the content inside the div */
+
+
 }
+
+.modal-content {
+    text-align: center;}
 
 .carousel {
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden; /* Hide overflowing content */
+    width: 100%; /* Ensure full width */
+    max-height: 70%; /* Adjust the maximum height percentage as needed */
+  transition: all 0.5s ease !important;
+
 }
 
 .carousel-item {
