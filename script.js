@@ -162,7 +162,7 @@ window.addEventListener('load', positionIcons);
 </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-        <a href="https://storymaps.arcgis.com/stories/f0ed540b49544d79a493fd46a8697fc7"><img src="../img/irish.png" alt="irish"></a>
+        <a href="https://storymaps.arcgis.com/stories/e52c8d0c8f76491188d3a23698117ef6"><img src="../img/irish.png" alt="irish"></a>
                         </div>
 
                         <!-- Add more church images here -->
