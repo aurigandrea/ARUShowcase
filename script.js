@@ -177,7 +177,9 @@ window.addEventListener('load', positionIcons);
                          <div class="carousel-item">
                            <a href="https://storymaps.arcgis.com/stories/db71842087234725952aa42bdd762dfb"><img src="../img/sex.png" alt="sex"></a>
                         </div>
-
+                         <div class="carousel-item">
+                           <a href="https://storymaps.arcgis.com/stories/bc6670773c3747739f328539be62739f"><img src="../img/india.png" alt="india"></a>
+                        </div>
 
                         <!-- Add more museum images here -->
                     </div>
@@ -202,6 +204,9 @@ window.addEventListener('load', positionIcons);
                         </div>
                          <div class="carousel-item">
         <a href="https://storymaps.arcgis.com/stories/cd6d5d86122e47af8d12e24a808f29a5"><img src="../img/911.png" alt="911"></a>
+                        </div>
+                         <div class="carousel-item">
+        <a href="https://storymaps.arcgis.com/stories/468a8d2845584deba536c23e40beb26f"><img src="../img/anna.png" alt="anna"></a>
                         </div>
 
                         <!-- Add more library images here -->
@@ -304,4 +309,7 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
-});
+});function toggleMenu() {
+    const navbarLinks = document.querySelector('.navbar-links');
+    navbarLinks.style.display = navbarLinks.style.display === 'block' ? 'none' : 'block';
+}

@@ -22,20 +22,38 @@ header {
     transition: top 0.3s; /* Smooth transition effect */
 }
 
+/* Navbar styles */
 header .navbar {
     width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: gold; /* Initial background color */
+    transition: background-color 0.3s ease; /* Transition for background color change */
 }
 
 header .navbar a {
     color: darkblue;
     text-decoration: none;
     padding: 10px 20px;
+    position: relative; /* Add relative positioning for pseudo-element */
+    transition: transform 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
 }
 
+/* Hover effects for navbar links */
+header .navbar a:hover {
+    transform: scale(1.5);
+    opacity: 1;
+    filter: blur(0);
+    color: #fff; /* Change text color on hover */
+    background-color: RGB(	0, 0, 139, 0.7); /* Change background color on hover */
+}
+
+/* Blur other links when one is hovered */
+header .navbar a:hover ~ a {
+    filter: blur(5px); /* Blur other links */
+}
 /* Styles for town map */
 .town-map {
     position: relative;
@@ -112,8 +130,6 @@ display: none;}
   width: 100px;
   outline: black;
   background-size: 100%, 100%;
-  border-radius: 50%;
-  border: 1px solid black;
   background-image: none;
 }
 
@@ -205,6 +221,15 @@ footer {
     header .navbar {
         width: 100%;
     }
+  .navbar-links {
+        display: none; /* Hide navigation links on smaller screens */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu icon on smaller screens */
+        cursor: pointer;
+    }
+}
 
     .welcome {
         margin-top: 10vh; /* Adjusted margin for smaller screens using vh */
@@ -225,7 +250,18 @@ footer {
         display: block;
     }
 }
+header .navbar {
+        justify-content: flex-end; /* Align items to the right for smaller screens */
+    }
 
+    .navbar-links {
+        display: none; /* Hide navigation links by default on smaller screens */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show hamburger menu icon on smaller screens */
+    }
+}
 #gallery-modal {
     display: none;
     position: absolute; /* Set position to absolute */
@@ -255,6 +291,11 @@ footer {
     cursor: pointer;
 }
 
+.hamburger-menu {
+        display: block;
+        z-index: 2;
+    }
+
 @media only screen and (max-width: 480px) {
     header .navbar a {
         padding: 5px 10px; /* Adjust padding for smaller screens */
@@ -267,5 +308,17 @@ footer {
     .town-map {
         margin-top: 15vh; /* Further adjusted margin for even smaller screens using vh */
         margin-bottom: 15vh;
+    }
+}
+
+/* Display navbar links on larger screens */
+@media (min-width: 769px) {
+    header .navbar .navbar-links {
+        display: flex;
+    }
+
+    /* Hide hamburger menu icon on larger screens */
+    .hamburger-menu {
+        display: none !important;
     }
 }
