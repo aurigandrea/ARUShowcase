@@ -331,7 +331,6 @@ p {
      .column {
         flex-basis: 100%; /* Each column takes full width on small screens */
     }
-}
 
     /* Styles for collapsed navbar */
     .navbar-toggle .navbar-links {
