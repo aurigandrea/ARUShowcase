@@ -124,8 +124,15 @@ header .navbar a:hover ~ a {
 .carousel-item:not(.active) img {
     display: none;
 }
+.carousel-control-prev-icon {
+    height: 100px;
+    width: 100px;
+    outline: black;
+    background-size: 100%, 100%;
+    background-image: none;
+    transform: scaleX(-1); /* Flip the arrow horizontally */
+}
 
-.carousel-control-prev-icon,
 .carousel-control-next-icon {
     height: 100px;
     width: 100px;
