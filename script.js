@@ -186,6 +186,8 @@ window.addEventListener('load', positionIcons);
     <li data-target="carouselMuseum" data-slide-to="0" class="active"></li>
     <li data-target="carouselMuseum" data-slide-to="1"></li>
     <li data-target="carouselMuseum" data-slide-to="2"></li>
+     <li data-target="carouselMuseum" data-slide-to="3"></li>
+
 </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -197,6 +199,10 @@ window.addEventListener('load', positionIcons);
                          <div class="carousel-item">
                            <a href="https://storymaps.arcgis.com/stories/bc6670773c3747739f328539be62739f"><img src="../img/india.png" alt="india"></a>
                         </div>
+                        <div class="carousel-item">
+                           <a href="https://storymaps.arcgis.com/stories/fde3bb28eef54e21926f705663a9356e"><img src="../img/money.png" alt="money"></a>
+                        </div>
+
 
                         <!-- Add more museum images here -->
                     </div>
